@@ -1,0 +1,1604 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#"
+     xml:base="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wd="http://www.wikidata.org/entity/"
+     xmlns:dbr="http://dbpedia.org/resource/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:calcio="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021">
+        <dc:creator>Morelli Pierandrea</dc:creator>
+        <dc:creator>Nuzzarello G.Marco</dc:creator>
+        <dc:date>02 Febbraio 2021</dc:date>
+        <dc:description>Descrizione modello calcistico con entità aggiornate al 2021</dc:description>
+        <dc:title>Calcio 2021</dc:title>
+        <vann:preferredNamespacePrefix>calcio</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#</vann:preferredNamespaceUri>
+        <rdfs:label>Calcio2021</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaCalciatore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaCalciatore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaSquadra"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haCalciatore"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>Allenatore allena Calciatore</rdfs:comment>
+        <rdfs:label>allenaCalciatore</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaSquadra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaSquadra">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenataDa"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Allenatore allena Squadra</rdfs:comment>
+        <rdfs:label>allenaSquadra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenataDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenataDa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>Squadra allenata da Allenatore</rdfs:comment>
+        <rdfs:label>allenataDa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInLega -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInLega">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#squadraInLega"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Lega"/>
+        <rdfs:comment>Ogni Squadra gioca in una Lega</rdfs:comment>
+        <rdfs:label>giocaInLega</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInSquadra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInSquadra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haCalciatore"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Ogni Calciatore gioca in una Squadra</rdfs:comment>
+        <rdfs:label>giocaInSquadra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInStadio -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInStadio">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Stadio"/>
+        <rdfs:comment>Ogni Squadra gioca in uno Stadio</rdfs:comment>
+        <rdfs:label>giocaInStadio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haAllenato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haAllenato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Allenatore che ha allenato una Squadra in passato</rdfs:comment>
+        <rdfs:label>haAllenato</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haCalciatore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haCalciatore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:comment>Una squadra è composta da Calciatori</rdfs:comment>
+        <rdfs:label>haCalciatore</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haRuolo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haRuolo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:comment>Ogni calciatore ha un ruolo</rdfs:comment>
+        <rdfs:label>haRuolo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haRuoloInSquadra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haRuoloInSquadra">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haRuolo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#ruoloInSquadra"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment>PropertyChain che inferisce il ruolo del calciatore in una squadra conoscendo la squadra, il calciatore, e il ruolo del calciatore</rdfs:comment>
+        <rdfs:label>haRuoloInSquadra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haVintoTrofeoCalciatore -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haVintoTrofeoCalciatore">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore"/>
+        <rdfs:comment>Un calciatore ha vinto un trofeo</rdfs:comment>
+        <rdfs:label>haVintoTrofeoCalciatore</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#ruoloInSquadra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#ruoloInSquadra">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Ruolo del calciatore in Squadra</rdfs:comment>
+        <rdfs:label>ruoloInSquadra</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#squadraInLega -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#squadraInLega">
+        <rdfs:comment>Una squadra fa parte di una Lega</rdfs:comment>
+        <rdfs:label>squadraInLega</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#trofeoVintoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#trofeoVintoDa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo"/>
+        <rdfs:comment>un trofeo vinto da una squadra</rdfs:comment>
+        <rdfs:label>trofeoVintoDa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo"/>
+        <rdfs:comment>una squadra vince un trofeo</rdfs:comment>
+        <rdfs:label>vinceTrofeo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#anni -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#anni">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>età di un calciatore</rdfs:comment>
+        <rdfs:label>anni</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#annoDiFondazione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#annoDiFondazione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>anno di fondazione di una squadra</rdfs:comment>
+        <rdfs:label>annoDiFondazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#golTotali -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#golTotali">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>gol fatti da un calciatore</rdfs:comment>
+        <rdfs:label>golTotali</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#nazionalità -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#nazionalità">
+        <rdfs:comment>nazionalità di un calciatore</rdfs:comment>
+        <rdfs:label>nazionalità</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#nome">
+        <rdfs:comment>nome di un calciatore</rdfs:comment>
+        <rdfs:label>nome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#presenzeClubAttuale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#presenzeClubAttuale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>numero di presenze di un calciatore nella squadra dove gioca attualmente</rdfs:comment>
+        <rdfs:label>presenzeClubAttuale</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/SoccerClub -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/SoccerClub">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Squadra di calcio allineata in DBPedia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/SoccerPlayer -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/SoccerPlayer">
+        <rdfs:comment>Calciatore allineato in DBPedia</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Allenatore di Squadre</rdfs:comment>
+        <rdfs:label>Allenatore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AllenatoreFamoso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AllenatoreFamoso">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaSquadra"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haAllenato"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+        <rdfs:comment>Allenatore che allena Club e Nazionali</rdfs:comment>
+        <rdfs:label>AllenatoreFamoso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AllenatoreNazionale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AllenatoreNazionale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+        <rdfs:comment>Allenatore che allena Nazionali</rdfs:comment>
+        <rdfs:label>AllenatoreNazionale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Attaccante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Attaccante">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:comment>Ruolo Attaccante</rdfs:comment>
+        <rdfs:label>Attaccante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:comment>Calciatore generico</rdfs:comment>
+        <rdfs:label>Calciatore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Centrocampista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Centrocampista">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:comment>Ruolo Centrocampista</rdfs:comment>
+        <rdfs:label>Centrocampista</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Squadra Club</rdfs:comment>
+        <rdfs:label>Club</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Difensore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Difensore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:comment>Ruolo Difensore</rdfs:comment>
+        <rdfs:label>Difensore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GiovanePromessa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GiovanePromessa">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#giocaInSquadra"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClub"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#anni"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:comment>Calciatore che gioca in TopClub e ha meno di 22 anni</rdfs:comment>
+        <rdfs:label>GiovanePromessa</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Lega -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Lega">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Bundesliga"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liga"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PremierLeague"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Leghe Europee</rdfs:comment>
+        <rdfs:label>Lega</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra"/>
+        <rdfs:comment>Squadre Nazionali</rdfs:comment>
+        <rdfs:label>Nazionale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Portiere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Portiere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo"/>
+        <rdfs:comment>Ruolo Portiere</rdfs:comment>
+        <rdfs:label>Portiere</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Ruolo">
+        <rdfs:comment>Ruolo Calciatori</rdfs:comment>
+        <rdfs:label>Ruolo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Senatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Senatore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:comment>Calciatore che ha più di 300 presenze in squadra</rdfs:comment>
+        <rdfs:label>Senatore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Squadra">
+        <rdfs:comment>Squadra Generica</rdfs:comment>
+        <rdfs:label>Squadra</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Stadio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Stadio">
+        <rdfs:comment>Stadio dove giocano tutte le squadre</rdfs:comment>
+        <rdfs:label>Stadio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopCalciatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopCalciatore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <rdfs:comment>Calciatore che ha vinto un TrofeoCalciatore</rdfs:comment>
+        <rdfs:label>TopCalciatore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClub">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club"/>
+        <rdfs:comment>Club che ha vinto minimo 5 TrofeoClub</rdfs:comment>
+        <rdfs:label>TopClub</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClubEU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClubEU">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopClub"/>
+        <rdfs:comment>Club che vince minimo 3 TrofeoClubEU</rdfs:comment>
+        <rdfs:label>TopClubEU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopNazionali -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopNazionali">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+        <rdfs:comment>Nazionali che hanno vinto almeno 1 coppa del mondo</rdfs:comment>
+        <rdfs:label>TopNazionali</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo">
+        <rdfs:comment>Trofeo Generico</rdfs:comment>
+        <rdfs:label>Trofeo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo"/>
+        <rdfs:comment>Pallone d&apos;oro</rdfs:comment>
+        <rdfs:label>TrofeoCalciatore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo"/>
+        <rdfs:comment>Trofei dedicati ai Club</rdfs:comment>
+        <rdfs:label>TrofeoClub</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <rdfs:comment>Trofei dedicati ai Club Europei</rdfs:comment>
+        <rdfs:label>TrofeoClubEU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Trofeo"/>
+        <rdfs:comment>Trofei delle Nazionali</rdfs:comment>
+        <rdfs:label>TrofeoNazionale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment>Classe persona allineata in friend-of-a-friend</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/resource/FIFA_Ballon_dOr -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/FIFA_Ballon_dOr">
+        <rdfs:comment>Pallone d&apos;oro su dbpedia</rdfs:comment>
+        <rdfs:label>FIFA_Ballon_dOr</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AndreaPirlo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AndreaPirlo">
+        <allenaSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment xml:lang="en">Juventus&apos;s coach</rdfs:comment>
+        <rdfs:label>Andrea Pirlo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AntonioConte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AntonioConte">
+        <allenaSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <haAllenato rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Allenatore dell&apos;Inter
+Ha allenato la nazionale italiana</rdfs:comment>
+        <rdfs:label>AntonioConte</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AttaccanteJuventus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AttaccanteJuventus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Attaccante"/>
+        <ruoloInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Attaccante della squadra Juventus</rdfs:comment>
+        <rdfs:label>AttaccanteJuventus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Barcellona -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Barcellona">
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liga"/>
+        <giocaInStadio rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CampNou"/>
+        <rdfs:comment>Squadra di calcio (Club) Barcellona</rdfs:comment>
+        <rdfs:label>Barcellona</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#BayernMonaco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#BayernMonaco">
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Bundesliga"/>
+        <rdfs:comment>Squadra di calcio (Club) Bayern Monaco</rdfs:comment>
+        <rdfs:label>BayernMonaco</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Bundesliga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Bundesliga">
+        <rdfs:comment>Principale lega tedesca</rdfs:comment>
+        <rdfs:label>Bundesliga</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CampNou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CampNou">
+        <rdfs:comment>Stadio CampNou (Barcellona)</rdfs:comment>
+        <rdfs:label>CampNou</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CesarePrandelli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CesarePrandelli">
+        <allenaSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Allenatore dell&apos;Italia (Nazionale)</rdfs:comment>
+        <rdfs:label>CesarePrandelli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CristianoRonaldo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#CristianoRonaldo">
+        <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q11571"/>
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <haRuolo rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AttaccanteJuventus"/>
+        <haVintoTrofeoCalciatore rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PalloneOro"/>
+        <anni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</anni>
+        <golTotali rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</golTotali>
+        <nazionalità>Portogallo</nazionalità>
+        <nome>Cristiano Ronaldo dos Santos Aveiro</nome>
+        <presenzeClubAttuale rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78</presenzeClubAttuale>
+        <rdfs:comment>Calciatore della Juventus</rdfs:comment>
+        <rdfs:label>CristianoRonaldo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#DeLigt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#DeLigt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <anni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</anni>
+        <rdfs:comment>Giovane promessa Juventus</rdfs:comment>
+        <rdfs:label>DeLigt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GigiBuffon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GigiBuffon">
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <anni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</anni>
+        <nazionalità>Italia</nazionalità>
+        <nome>Gianluigi Buffon</nome>
+        <presenzeClubAttuale rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">522</presenzeClubAttuale>
+        <rdfs:comment>Calciatore della Juventus</rdfs:comment>
+        <rdfs:label>GigiBuffon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GigioDonnaruma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#GigioDonnaruma">
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Milan"/>
+        <anni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</anni>
+        <nazionalità>Italia</nazionalità>
+        <nome>Gianluigi Donnaruma</nome>
+        <rdfs:comment>Calciatore del Milan</rdfs:comment>
+        <rdfs:label>GigioDonnaruma</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club"/>
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA"/>
+        <giocaInStadio rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#StadioMeazza"/>
+        <rdfs:comment>Squadra di calcio (Club) Inter</rdfs:comment>
+        <rdfs:label>Inter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+        <rdfs:comment>Squadra di calcio (Nazionale) Italia</rdfs:comment>
+        <rdfs:label>Italia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus">
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA"/>
+        <giocaInStadio rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#JuventusStadium"/>
+        <rdfs:comment>Squadra di calcio (Club) Juventus</rdfs:comment>
+        <rdfs:label>Juventus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#JuventusStadium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#JuventusStadium">
+        <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q62149"/>
+        <rdfs:comment>Stadio &quot;Juventus Stadium&quot;</rdfs:comment>
+        <rdfs:label>JuventusStadium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liga -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liga">
+        <rdfs:comment>Principale lega spagnola</rdfs:comment>
+        <rdfs:label>Liga</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#LionelMessi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#LionelMessi">
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Barcellona"/>
+        <rdfs:comment>Calciatore del Barcellona</rdfs:comment>
+        <rdfs:label>LionelMessi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liverpool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liverpool">
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PremierLeague"/>
+        <rdfs:comment>Squadra di calcio (Club) Liverpool</rdfs:comment>
+        <rdfs:label>Liverpool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Milan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Milan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Club"/>
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA"/>
+        <rdfs:comment>Squadra di calcio (Club) Milan</rdfs:comment>
+        <rdfs:label>Milan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1938 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1938">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Mondiali di Calcio per nazioni
+Edizione 1938</rdfs:comment>
+        <rdfs:label>Mondiali1938</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1982 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1982">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Mondiali di Calcio per nazioni
+Edizione 1982</rdfs:comment>
+        <rdfs:label>Mondiali1982</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali2006">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Mondiali di Calcio per nazioni
+Edizione 2006</rdfs:comment>
+        <rdfs:label>Mondiali2006</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali1934 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali1934">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Italia"/>
+        <rdfs:comment>Mondiali di Calcio per nazioni
+Edizione 1934</rdfs:comment>
+        <rdfs:label>Mondiali1934</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        <rdfs:comment>Mondiali di Calcio per nazioni
+Edizione 2010</rdfs:comment>
+        <rdfs:label>Mondiali2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PalloneOro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PalloneOro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore"/>
+        <rdfs:comment>Principale trofeo per calciatore</rdfs:comment>
+        <rdfs:label>PalloneOro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Portogallo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Portogallo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+        <rdfs:comment>Squadra di calcio (Nazionale) Portogallo</rdfs:comment>
+        <rdfs:label>Portogallo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PremierLeague -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#PremierLeague">
+        <rdfs:comment>Principale lega inglese</rdfs:comment>
+        <rdfs:label>PremierLeague</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#RealMadrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#RealMadrid">
+        <giocaInLega rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Liga"/>
+        <rdfs:comment>Squadra di calcio (Club) Real Madrid</rdfs:comment>
+        <rdfs:label>Real Madrid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#RomeluLukaku -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#RomeluLukaku">
+        <giocaInSquadra rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <anni rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</anni>
+        <nazionalità>Belgio</nazionalità>
+        <nome>Romelu Lukaku</nome>
+        <rdfs:comment>Calciatore dell&apos;Inter</rdfs:comment>
+        <rdfs:label>RomeluLukaku</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2007 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2007">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2007</rdfs:comment>
+        <rdfs:label>Scudetto_2007</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2008 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2008">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2008</rdfs:comment>
+        <rdfs:label>Scudetto_2008</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2009 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2009">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2009</rdfs:comment>
+        <rdfs:label>Scudetto_2009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2010</rdfs:comment>
+        <rdfs:label>Scudetto_2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2016</rdfs:comment>
+        <rdfs:label>Scudetto_2016</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2017</rdfs:comment>
+        <rdfs:label>Scudetto_2017</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2018</rdfs:comment>
+        <rdfs:label>Scudetto_2018</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2019</rdfs:comment>
+        <rdfs:label>Scudetto_2019</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale trofeo lega italiana
+Edizione 2020</rdfs:comment>
+        <rdfs:label>Scudetto_2020</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#SerieA">
+        <giocaInStadio rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#StadioMeazza"/>
+        <rdfs:comment>Principale lega italiana</rdfs:comment>
+        <rdfs:label>Serie A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Spagna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Spagna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+        <vinceTrofeo rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali2010"/>
+        <rdfs:comment>Squadra di calcio (Nazionale) Spagna</rdfs:comment>
+        <rdfs:label>Spagna</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#StadioMeazza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#StadioMeazza">
+        <rdfs:comment>Stadio Meazza</rdfs:comment>
+        <rdfs:label>StadioMeazza</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1964 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1964">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:label>Principale Trofeo Europeo per Club
+Edizione 1964</rdfs:label>
+        <rdfs:label>UEFA_Champions_League_1964</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1965 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1965">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:label>Principale Trofeo Europeo per Club
+Edizione 1965</rdfs:label>
+        <rdfs:label>UEFA_Champions_League_1965</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1985 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1985">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale Trofeo Europeo per Club
+Edizione 1985</rdfs:comment>
+        <rdfs:label>UEFA_Champions_League_1985</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1996 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1996">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Juventus"/>
+        <rdfs:comment>Principale Trofeo Europeo per Club
+Edizione 1996</rdfs:comment>
+        <rdfs:label>UEFA_Champions_League_1996</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_2006 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_2006">
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Barcellona"/>
+        <rdfs:comment>Principale Trofeo Europeo per Club
+Edizione 2006</rdfs:comment>
+        <rdfs:label>UEFA_Champions_League_2006</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClubEU"/>
+        <trofeoVintoDa rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Inter"/>
+        <rdfs:comment>Principale Trofeo Europeo per Club
+Edizione 2010</rdfs:comment>
+        <rdfs:label>UEFA_Champions_League_2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q11571 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q11571">
+        <rdfs:comment>Cristiano Ronaldo su Wikidata</rdfs:comment>
+        <rdfs:label>Cristiano_Ronaldo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q62149 -->
+
+    <owl:NamedIndividual rdf:about="http://www.wikidata.org/entity/Q62149">
+        <rdfs:comment>Juventus Stadium su Wikidata</rdfs:comment>
+        <rdfs:label>JuventusStadium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoClub"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoNazionale"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1938"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1982"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali2006"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali1934"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1938"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali1982"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondali2006"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali1934"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Mondiali2010"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2007"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2008"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2009"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2010"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2016"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2017"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2018"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2019"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Scudetto_2020"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1964"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1965"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1985"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_1996"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#UEFA_Champions_League_2010"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allenatore Nazionale</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Allenatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#allenaSquadra"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#a"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#n"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#n"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#AllenatoreNazionale"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Calciatore</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#haVintoTrofeoCalciatore"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopCalciatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senatore in base al numero di presenze</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Calciatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#presenzeClubAttuale"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#p"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Senatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Nazionali</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#Nazionale"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#vinceTrofeo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TopNazionali"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allineamento pallone d&apos;oro</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#TrofeoCalciatore"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#SameIndividualAtom"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/morellinuzzarello/progetto/calcio2021#n"/>
+                        <swrl:argument2 rdf:resource="http://dbpedia.org/resource/FIFA_Ballon_dOr"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
